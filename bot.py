@@ -2,9 +2,6 @@ import discord
 import os
 from discord.ext import commands
 import random
-from bot_logic import *
-from imagenesapi import *
-from anime_image import *
 from animales import *
 
 description = '''An example bot to showcase the discord.ext.commands extension
