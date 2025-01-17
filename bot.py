@@ -62,14 +62,6 @@ async def joined(ctx, member: discord.Member):
     """Dice cuando un miembro se unio."""
     await ctx.send(f'{member.name} joined {discord.utils.format_dt(member.joined_at)}')
 
-@bot.command()
-async def mem(ctx):
-    with open('images/4.jpeg', 'rb') as f:
-        # ¡Vamos a almacenar el archivo de la biblioteca Discord convertido en esta variable!
-        picture = discord.File(f)
-        print(os.listdir('images'))
-    # A continuación, podemos enviar este archivo como parámetro.
-    await ctx.send(file=picture)
 @bot.command('animal')
 async def duck(ctx):
     '''Una vez que llamamos al comando animal, 
@@ -79,12 +71,6 @@ async def duck(ctx):
         image_url = get_duck_image_url()
     elif x == 2:
         image_url = get_dog_image_url()
-    await ctx.send(image_url)
-@bot.command('anime')
-async def duck(ctx):
-    '''Una vez que llamamos al comando anime, 
-    el programa llama a la función get_anime_image_url'''
-    image_url = get_anime_image_url()
     await ctx.send(image_url)
 @bot.group()
 async def cool(ctx):
